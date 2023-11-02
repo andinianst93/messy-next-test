@@ -1,9 +1,9 @@
 ### Docker Dev 
 
-```docker build -t andinianst93/frontend:latest -f Dockerfile.dev .```
+```docker build -t whatever/frontend:latest -f Dockerfile.dev .```
 
 Not good:
-```docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app andinianst93/frontend```
+```docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app whatever/frontend```
 
 #### Docker Compose to setup volume
 
@@ -25,7 +25,7 @@ services:
 #### Test
 Two options
 - first:
-```docker run -it andinianst93/frontend npm run test```
+```docker run -it whatever/frontend npm run test```
 - second:
 set up second container in docker-compose.yml
 
